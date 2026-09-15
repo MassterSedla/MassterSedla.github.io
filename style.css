@@ -259,6 +259,42 @@ h2 {
     font-style: italic;
 }
 
+/* Job roles: role name leads, large and bold; employer/project follows, smaller */
+
+.role-title {
+    font-size: 1.22em !important;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+}
+
+.job-current .role-title {
+    font-size: 1.34em !important;
+    color: var(--accent);
+}
+
+.entry-company {
+    font-size: 0.86em;
+    color: var(--muted);
+    font-style: italic;
+    margin: 2px 0 8px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.current-badge {
+    font-style: normal;
+    font-size: 0.72em;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #fff;
+    background: var(--accent);
+    padding: 2px 9px;
+    border-radius: 20px;
+}
+
 .entry-sub {
     font-size: 0.9em;
     color: var(--accent);
@@ -293,6 +329,63 @@ li {
 
 .achievement li::marker {
     color: var(--accent);
+}
+
+.achievement strong {
+    color: var(--text);
+    font-weight: 700;
+}
+
+/* ---------- Project cards (compact, no job-style breakdown) ---------- */
+
+.project-card {
+    margin-bottom: 14px;
+    padding: 10px 14px;
+    background: var(--accent-light);
+    border-radius: 8px;
+}
+
+.project-card:last-child {
+    margin-bottom: 0;
+}
+
+.project-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.project-head h3 {
+    font-family: var(--serif);
+    font-size: 0.98em;
+    font-weight: 700;
+    margin: 0;
+    color: var(--text);
+}
+
+.project-head h3 a {
+    color: var(--text);
+}
+
+.project-tag {
+    font-size: 0.72em;
+    color: var(--accent);
+    font-style: italic;
+    white-space: nowrap;
+}
+
+.project-stack {
+    font-size: 0.78em;
+    color: var(--muted);
+    letter-spacing: 0.02em;
+    margin: 3px 0 6px;
+}
+
+.project-card p:not(.project-stack) {
+    margin: 0;
+    font-size: 0.88em;
 }
 
 a {
@@ -480,18 +573,56 @@ a:hover {
         font-size: 0.88em;
     }
 
+    .role-title {
+        font-size: 1.05em !important;
+    }
+
+    .job-current .role-title {
+        font-size: 1.15em !important;
+    }
+
     .entry-date {
         font-size: 0.76em;
     }
 
-    .entry-sub {
+    .entry-sub,
+    .entry-company {
         font-size: 0.76em;
         margin: 1px 0 3px;
+    }
+
+    .current-badge {
+        font-size: 0.62em;
+        padding: 1px 6px;
     }
 
     .entry p {
         font-size: 0.78em;
         margin-bottom: 3px;
+    }
+
+    .project-card {
+        padding: 5px 8px;
+        margin-bottom: 4px;
+        border-radius: 4px;
+        break-inside: avoid;
+    }
+
+    .project-head h3 {
+        font-size: 0.82em;
+    }
+
+    .project-tag {
+        font-size: 0.66em;
+    }
+
+    .project-stack {
+        font-size: 0.7em;
+        margin: 1px 0 2px;
+    }
+
+    .project-card p:not(.project-stack) {
+        font-size: 0.78em;
     }
 
     .entry .label {
@@ -514,7 +645,15 @@ a:hover {
     }
 
     .entry-sub,
+    .entry-company,
+    .project-tag,
     .role {
+        color: var(--accent) !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    .job-current .role-title {
         color: var(--accent) !important;
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
@@ -526,8 +665,15 @@ a:hover {
         print-color-adjust: exact;
     }
 
-    .github-link {
+    .github-link,
+    .current-badge {
         background: var(--accent) !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    .project-card {
+        background: var(--accent-light) !important;
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
     }
