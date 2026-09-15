@@ -15,7 +15,8 @@
 
 body {
     font-family: var(--sans);
-    line-height: 1.55;
+    font-size: 17.5px;
+    line-height: 1.58;
     margin: 0;
     padding: 24px;
     background-color: var(--bg);
@@ -449,14 +450,14 @@ a:hover {
 @media print {
     @page {
         size: A4;
-        margin: 9mm 11mm;
+        margin: 7mm 10mm;
     }
 
     body {
         padding: 0;
         background: #fff;
-        font-size: 9pt;
-        line-height: 1.26;
+        font-size: 11.3pt;
+        line-height: 1.32;
     }
 
     .container {
@@ -472,8 +473,8 @@ a:hover {
     }
 
     .photo {
-        width: 64px;
-        height: 64px;
+        width: 74px;
+        height: 74px;
         border-width: 2px;
         box-shadow: none;
     }
@@ -499,12 +500,12 @@ a:hover {
     }
 
     .contact-row svg {
-        width: 10px;
-        height: 10px;
+        width: 12px;
+        height: 12px;
     }
 
     .body-grid {
-        grid-template-columns: 175px 1fr;
+        grid-template-columns: 195px 1fr;
     }
 
     .sidebar {
@@ -526,7 +527,7 @@ a:hover {
     }
 
     .sidebar-section {
-        margin-bottom: 9px;
+        margin-bottom: 7px;
     }
 
     .tag-group {
@@ -560,12 +561,12 @@ a:hover {
     }
 
     .section {
-        margin-bottom: 7px;
+        margin-bottom: 5px;
     }
 
     .entry {
-        margin-bottom: 6px;
-        padding-bottom: 5px;
+        margin-bottom: 5px;
+        padding-bottom: 4px;
         break-inside: avoid;
     }
 
@@ -602,8 +603,8 @@ a:hover {
     }
 
     .project-card {
-        padding: 5px 8px;
-        margin-bottom: 4px;
+        padding: 4px 8px;
+        margin-bottom: 3px;
         border-radius: 4px;
         break-inside: avoid;
     }
